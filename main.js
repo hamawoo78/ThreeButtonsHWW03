@@ -1,4 +1,3 @@
-// let origArray = ["apple","apple","apple"];
 let origArray = [2,3,4]
 
 function square() {
@@ -8,10 +7,13 @@ function square() {
 
 document.addEventListener("DOMContentLoaded", function (event) {
  
-    document.getElementById("cube").addEventListener("click", function () {
+    let cubeFunction = function(){
         let x = origArray.map(myCube);
         print(x);
-    });
+    };
+    document.getElementById("cube").addEventListener("click", cubeFunction);
+
+
     
     function toTheFouth(){
         let x = origArray.map(myToTheFouth);
